@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Gärtla - Premium Gartenservice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfdfc;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* Smooth page transitions */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Enhanced scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f5f5f5;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #ffd93d, #ffb700);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #ffb700, #ffa500);
+        }
+
+        /* Custom scrollbar for Firefox */
+        * {
+            scrollbar-color: #ffd93d #f5f5f5;
+            scrollbar-width: thin;
+        }
+
+        /* Smooth transitions for all */
+        * {
+            transition-property: background-color, border-color, color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 200ms;
+        }
+
+        /* Prevent transition on scroll and position */
+        .no-transition {
+            transition: none !important;
+        }
+
+        /* Custom focus styles for better accessibility */
+        :focus-visible {
+            outline: 2px solid #ffd93d;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Custom button hover effects */
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Floating animation */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Pulse animation enhancement */
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                opacity: 1;
+                filter: drop-shadow(0 0 0px rgba(253, 217, 61, 0.5));
+            }
+
+            50% {
+                opacity: 0.9;
+                filter: drop-shadow(0 0 4px rgba(253, 217, 61, 0.5));
+            }
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* Selection styling */
+        ::selection {
+            background-color: #ffd93d;
+            color: #1a2a22;
+        }
+
+        ::-moz-selection {
+            background-color: #ffd93d;
+            color: #1a2a22;
+        }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "assets/": "https://esm.sh/assets@^3.0.1/"
+  }
+}
+</script>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
+</head>
+
+<body class="bg-white text-emerald-950 overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
