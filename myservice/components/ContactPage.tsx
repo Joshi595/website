@@ -53,7 +53,7 @@ const ContactPage: React.FC = () => {
   }
 
   // joshi vardhan lella
-  // srikanth
+  // srikanth git sri
   
   return (
     <div className="bg-[#1a2a22] min-h-screen pt-32 pb-20">
