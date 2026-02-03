@@ -32,7 +32,6 @@ const ContactPage: React.FC = () => {
     }
   };
 
-  // joshi vardhan lella
   if (status === 'success') {
     return (
       <div className="bg-[#1a2a22] min-h-screen flex items-center justify-center pt-32 pb-20 px-6">

@@ -7,7 +7,6 @@ interface ContactProps {
   onNavigate: () => void;
 }
 
-// joshi vardhan lella
 const Contact: React.FC<ContactProps> = ({ onNavigate }) => {
   const { t } = useLanguage();
   return (
