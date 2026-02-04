@@ -12,9 +12,9 @@ const ContactPage: React.FC = () => {
 
     setStatus('submitting');
     const formData = new FormData(e.currentTarget);
-    
+
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, { 
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
         body: formData,
         headers: {
@@ -41,7 +41,7 @@ const ContactPage: React.FC = () => {
           <p className="text-xl text-[#1a2a22]/60 font-light mb-12 leading-relaxed">
             Ihre Nachricht wurde erfolgreich an <strong>gartensass@gmx.de</strong> gesendet. Wir werden uns innerhalb der nächsten 24 Stunden bei Ihnen melden.
           </p>
-          <button 
+          <button
             onClick={() => setStatus('idle')}
             className="px-12 py-5 bg-[#1a2a22] text-white rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all shadow-xl"
           >
@@ -54,7 +54,7 @@ const ContactPage: React.FC = () => {
 
 
   return (
-    <div className="bg-[#1a2a22] min-h-screen pt-32 pb-20">
+    <div className="bg-gradient-to-br from-emerald-800 via-emerald-900 to-teal-900 min-h-screen pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="mb-24 text-center">
           <div className="inline-flex items-center gap-4 mb-8">
@@ -74,13 +74,13 @@ const ContactPage: React.FC = () => {
           <div id="zentrale" className="lg:col-span-5 space-y-12 scroll-mt-32">
             <div className="bg-[#2b4036]/40 backdrop-blur-md p-10 rounded-[3rem] border border-white/5">
               <h3 className="text-2xl font-bold text-white serif mb-8">Unsere Zentrale</h3>
-              
+
               <div className="space-y-10">
                 <div className="flex gap-6">
                   <div className="w-14 h-14 bg-yellow-400 rounded-2xl flex items-center justify-center text-[#1a2a22] text-2xl shadow-xl">📍</div>
                   <div>
                     <span className="block text-[#f1f5f2]/30 uppercase font-black text-[9px] tracking-widest mb-1">Standort</span>
-                    <p className="text-xl text-white font-medium">Bischofsweiherstraße 14<br/>91056 Erlangen, Germany</p>
+                    <p className="text-xl text-white font-medium">Bischofsweiherstraße 14<br />91056 Erlangen, Germany</p>
                   </div>
                 </div>
 
@@ -89,7 +89,7 @@ const ContactPage: React.FC = () => {
                   <div>
                     <span className="block text-[#f1f5f2]/30 uppercase font-black text-[9px] tracking-widest mb-1">Telefon</span>
                     <p className="text-xl text-white font-medium">0176/54079960</p>
-                    <p className="text-[#f1f5f2]/40 text-sm mt-1">Mo-Fr: 08:00 - 18:00 Uhr</p>
+                    <p className="text-[#f1f5f2]/40 text-sm mt-1">Mo-Fr: 08:00 - 20:00 Uhr</p>
                   </div>
                 </div>
 
@@ -107,14 +107,14 @@ const ContactPage: React.FC = () => {
             <div className="bg-yellow-400 p-10 rounded-[3rem] shadow-2xl">
               <h3 className="text-2xl font-bold text-[#1a2a22] serif mb-4">Besuchen Sie uns</h3>
               <p className="text-[#1a2a22]/70 mb-8 leading-relaxed">Kommen Sie auf einen Espresso bei Mein Gärtla vorbei und lassen Sie uns über Ihre Visionen sprechen.</p>
-              
+
               <div className="aspect-video w-full bg-[#1a2a22] rounded-2xl overflow-hidden border border-[#2b4036] shadow-2xl relative">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  loading="lazy" 
-                  allowFullScreen 
+                <iframe
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Mein Gärtla Location"
                   src="https://maps.google.com/maps?q=Bischofsweiherstraße%2014,%2091056%20Erlangen,%20Germany&t=k&z=18&ie=UTF8&iwloc=&output=embed"
@@ -127,7 +127,7 @@ const ContactPage: React.FC = () => {
             <div className="bg-white p-12 lg:p-16 rounded-[4rem] shadow-3xl">
               <h3 className="text-4xl font-bold text-[#1a2a22] serif mb-4">Senden Sie uns eine Nachricht</h3>
               <p className="text-[#1a2a22]/40 mb-12">Füllen Sie das Formular aus, wir melden uns umgehend bei Ihnen.</p>
-              
+
               <form onSubmit={handleSubmit} className="space-y-10">
                 <input type="hidden" name="_subject" value="Mein Gärtla: Neue Anfrage von {{name}}" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -167,7 +167,7 @@ const ContactPage: React.FC = () => {
                   </p>
                 )}
 
-                <button 
+                <button
                   disabled={status === 'submitting'}
                   className="w-full py-6 bg-[#1a2a22] text-white font-black uppercase tracking-[0.2em] rounded-full hover:bg-yellow-400 hover:text-[#1a2a22] transition-all shadow-2xl flex items-center justify-center gap-4 group disabled:opacity-70"
                 >
@@ -183,7 +183,7 @@ const ContactPage: React.FC = () => {
                     </>
                   )}
                 </button>
-                
+
                 <p className="text-center text-[#1a2a22]/20 text-[10px] font-bold uppercase tracking-widest">
                   Mit dem Absenden akzeptieren Sie unsere <a href="#" className="underline hover:text-yellow-500">Datenschutzbestimmungen</a>.
                 </p>
